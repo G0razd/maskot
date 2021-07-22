@@ -1,5 +1,5 @@
-import React from 'react'
-const mainColor = '#4ECE5F'
+import React from "react"
+const mainColor = "#4ECE5F"
 const secondaryColor = mainColor
 const AdventureMap = () => {
   return (
@@ -7,8 +7,6 @@ const AdventureMap = () => {
       id="ac9d9db3-c976-41a1-a1c2-ce888a7912c8"
       data-name="Layer 1"
       xmlns="http://www.w3.org/2000/svg"
-      width="832.02831"
-      height="400"
       viewBox="0 0 832.02831 646"
     >
       <path

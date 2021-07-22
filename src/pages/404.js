@@ -1,7 +1,6 @@
-import React from 'react'
-import Layout from '../components/layout/Layout'
-import Button from '../components/Button'
-import { Link } from 'gatsby'
+import React from "react"
+import { Layout } from "../components"
+import { Link } from "gatsby"
 
 const NotFound = () => (
   <Layout>
@@ -9,7 +8,7 @@ const NotFound = () => (
       <h1 className="text-9xl">∄</h1>
       <p className="pb-6 text-2xl">Tato stránka neexistuje</p>
       <Link href="/">
-        <Button>Domů</Button>
+        <button className="btn btn-primary">Domů</button>
       </Link>
     </div>
   </Layout>

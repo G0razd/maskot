@@ -1,10 +1,25 @@
 module.exports = {
   plugins: [
+    // Tailwind
+    'gatsby-plugin-postcss',
+
+    // Gallery
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     {
-      resolve: `gatsby-theme-codebushi`,
+      resolve: `gatsby-source-filesystem`,
       options: {
-        tailwindConfig: `tailwind.config.js`,
+        name: `images`,
+        path: `${__dirname}/src/images/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `src`,
+        path: `${__dirname}/src/`,
       },
     },
   ],
-};
+}

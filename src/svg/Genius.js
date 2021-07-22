@@ -1,5 +1,5 @@
-import React from 'react'
-const mainColor = '#4ECE5F'
+import React from "react"
+const mainColor = "#4ECE5F"
 const secondaryColor = mainColor
 const Genius = () => {
   return (
@@ -7,8 +7,6 @@ const Genius = () => {
       id="be9445cc-36a8-41fc-8663-3adeddcda149"
       data-name="Layer 1"
       xmlns="http://www.w3.org/2000/svg"
-      width="600"
-      height="533"
       viewBox="0 0 931 533"
     >
       <path

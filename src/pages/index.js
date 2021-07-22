@@ -1,19 +1,8 @@
-import React from 'react'
-import Button from '../components/Button'
-import Card from '../components/Card'
-import MemberCard from '../components/MemberCard'
-
-import LabelText from '../components/LabelText'
-import Layout from '../components/layout/Layout'
-import SplitSection from '../components/SplitSection'
-import team from '../data/team'
-
-import HeroImage from '../svg/HeroImage'
-import SvgCharts from '../svg/SvgCharts'
-import AdventureMap from '../svg/AdventureMap'
-import Genius from '../svg/Genius'
-import Line from '../svg/Line'
-import AnchorLink from 'react-anchor-link-smooth-scroll'
+import React from "react"
+import { Link } from "gatsby"
+import { Card, MemberCard, LabelText, Layout, SplitSection } from "/src/components"
+import { HeroImage, SvgCharts, AdventureMap, Genius, Line } from "/src/svg"
+import team from "../data/team"
 
 const Index = () => (
   <Layout>
@@ -22,8 +11,8 @@ const Index = () => (
         <div className="relative hidden w-1 mt-12 mr-4 md:inline-block">
           <Line />
         </div>
-        <div className="pt-10 text-center lg:text-left lg:w-1/2">
-          <h1 className="text-3xl font-bold leading-none lg:text-4xl xl:text-5xl">
+        <div className="pt-10 text-justify lg:text-left lg:w-1/2">
+          <h1 className="text-3xl font-bold lg:text-4xl xl:text-5xl">
             Baví Vás matematika a přemýšlíte jaké povolání si zvolit?
           </h1>
           <p className="mt-6 text-lg font-light lg:text-xl">
@@ -32,9 +21,11 @@ const Index = () => (
             (případně třetích ročníků), kteří se zajímají o studium matematiky na vysoké škole.
           </p>
           <p className="mt-8 md:mt-12">
-            <AnchorLink className="px-4" href="#info">
-              <Button size="lg">Chci vědět víc</Button>
-            </AnchorLink>
+            <Link className=" md:px-4" to="/#info">
+              <button className="h-24 px-8 mt-12 text-3xl font-bold btn btn-lg btn-primary">
+                Chci vědět víc
+              </button>
+            </Link>
           </p>
         </div>
         <div className="lg:w-1/2">
@@ -49,29 +40,24 @@ const Index = () => (
         <h2 className="text-3xl font-semibold lg:text-5xl">Informace</h2>
         <div className="flex flex-col mt-12 sm:flex-row sm:-mx-3">
           <div className="flex-1 px-3">
-            <Card className="mb-8">
-              <p className="text-xl font-semibold">První věc</p>
+            <Card className="min-h-full mb-8">
+              <p className="text-xl font-semibold">Budoucí spolužáci</p>
               <p className="mt-4">
-                An enim nullam tempor gravida donec enim ipsum blandit porta justo integer odio
-                velna vitae auctor integer.
+                Seznamíš se s lidmi, kteří tě budou doprovázet další roky tvého života.
               </p>
             </Card>
           </div>
           <div className="flex-1 px-3">
-            <Card className="mb-8">
-              <p className="text-xl font-semibold">Druhá věc</p>
-              <p className="mt-4">
-                An enim nullam tempor gravida donec enim ipsum blandit porta justo integer odio
-                velna vitae auctor integer.
-              </p>
+            <Card className="min-h-full mb-8">
+              <p className="text-xl font-semibold">Vysokoškolský život</p>
+              <p className="mt-4">Dozvíš se co obnáší studium na vysoké škole.</p>
             </Card>
           </div>
           <div className="flex-1 px-3">
-            <Card className="mb-8">
-              <p className="text-xl font-semibold">Třetí věc</p>
-              <p className="mt-4">
-                An enim nullam tempor gravida donec enim ipsum blandit porta justo integer odio
-                velna vitae auctor integer.
+            <Card className="min-h-full mb-8">
+              <p className="text-xl font-semibold">Vyučující</p>
+              <p className="my-auto">
+                Budeš si moct popovídat s vyučujícími z Ústavu matematiky a statistiky.
               </p>
             </Card>
           </div>
@@ -83,12 +69,11 @@ const Index = () => (
       id="ocekavani"
       primarySlot={
         <div className="lg:pr-32 xl:pr-48">
-          <h3 className="text-3xl font-semibold leading-tight">
-            Vydej se s námi na cestu za poznáním
-          </h3>
+          <h3 className="text-3xl font-semibold leading-tight">Zkušenosti starších</h3>
           <p className="mt-8 text-xl font-light leading-relaxed">
-            An enim nullam tempor gravida donec enim ipsum blandit porta justo integer odio velna
-            vitae auctor integer
+            Jsme současní studenti matematiky: od prváků k doktorandům, od studentů obecné
+            matematiky k budoucím učitelům. Podělíme se s vámi o naše zkušenosti, radosti i útrapy.
+            Řekneme vám, co bychom byli chtěli vědět, než jsme sami šli do prváku.
           </p>
         </div>
       }
@@ -98,10 +83,10 @@ const Index = () => (
       reverseOrder
       primarySlot={
         <div className="lg:pl-32 xl:pl-48">
-          <h3 className="text-3xl font-semibold leading-tight">Zkoumej rovnici vesmíru</h3>
+          <h3 className="text-3xl font-semibold leading-tight">Výběr oboru</h3>
           <p className="mt-8 text-xl font-light leading-relaxed">
-            An enim nullam tempor gravida donec enim ipsum blandit porta justo integer odio velna
-            vitae auctor integer
+            Povíme ti, co můžeš čekat od jednotlivých oborů. Dozvíš se, co vlastně všechno obor
+            ovlivňuje, a jak málo ve skutečnosti záleží na jeho volbě.
           </p>
         </div>
       }
@@ -110,36 +95,37 @@ const Index = () => (
     <SplitSection
       primarySlot={
         <div className="lg:pr-32 xl:pr-48">
-          <h3 className="text-3xl font-semibold leading-tight">Skládej puntíky na poličky</h3>
+          <h3 className="text-3xl font-semibold leading-tight">Hry a workshopy</h3>
           <p className="mt-8 text-xl font-light leading-relaxed">
-            An enim nullam tempor gravida donec enim ipsum blandit porta justo integer odio velna
-            vitae auctor integer
+            Zážitkovou formou zjistíš, co se na škole učí. Na vlastní kůži poznáš, co to znamená být
+            na vysoké škole
           </p>
         </div>
       }
       secondarySlot={<SvgCharts />}
     />
 
-    <section id="tym" className="py-20 lg:py-40">
+    {/* 
+    <section id="org" className="py-20 lg:py-40">
       <div className="container mx-auto">
-        <LabelText className="mb-8 text-center text-gray-600">Náš tým</LabelText>
+        <LabelText className="mb-8 text-center text-gray-600">Náši Orgové</LabelText>
         <div className="flex flex-col md:flex-row md:-mx-3">
-          {team.map((member) => (
+          {team.map((member, key) => (
             <div key={member.memberName} className="flex-1 px-3">
               <MemberCard member={member} />
             </div>
           ))}
         </div>
       </div>
-    </section>
-    <section className="container py-24 mx-auto my-20 text-center bg-gray-200 rounded-lg">
-      <h3 className="text-5xl font-semibold">Tak co, cítíš se na to?</h3>
-      <p className="mt-8 text-xl font-light">
-        Quis lectus nulla at volutpat diam ut. Enim lobortis scelerisque fermentum dui faucibus in.
-      </p>
-      <p className="mt-8">
-        <Button size="xl">Podat přihlášku</Button>
-      </p>
+    </section> */}
+    <section className="container py-20 mx-auto my-20 text-center bg-gray-200 rounded-lg">
+      <h3 className="text-3xl font-bold md:text-6xl">Tak co, cítíš se na to?</h3>
+      <p className="mt-6 text-xl ">Vyplň přihlášku a pojeď s námi na seznamovací kurz</p>
+      <Link to="/SignUp">
+        <button className="mt-12 font-bold md:h-24 md:px-8 md:text-3xl btn btn-lg btn-primary">
+          Jdu do toho!
+        </button>
+      </Link>
     </section>
   </Layout>
 )

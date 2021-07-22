@@ -1,9 +1,9 @@
 import React from 'react'
 
 const Footer = () => (
-  <footer className="container px-3 py-16 mx-auto mt-48 mb-8 text-gray-800">
-    <div className="flex -mx-3">
-      <div className="flex-1 px-3">
+  <footer className="py-16 mx-auto mt-48 mb-8 text-gray-800 container-lg w-100">
+    <div className="flex mx-3">
+      <div className="flex-1 flex-grow px-3">
         <h2 className="text-lg font-semibold">O nás</h2>
         <p className="mt-5">Ridiculus mus mauris vitae ultricies leo integer malesuada nunc.</p>
       </div>

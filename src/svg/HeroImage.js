@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react"
 
 const HeroImage = () => (
   <svg
@@ -49,9 +49,9 @@ const HeroImage = () => (
         width="78.4401"
         height="61.865"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix
           in="SourceAlpha"
           type="matrix"
@@ -71,9 +71,9 @@ const HeroImage = () => (
         width="104.51"
         height="96.552"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
         <feGaussianBlur stdDeviation="2" result="effect1_foregroundBlur" />
       </filter>
@@ -84,9 +84,9 @@ const HeroImage = () => (
         width="85.6454"
         height="91.1938"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix
           in="SourceAlpha"
           type="matrix"
@@ -106,9 +106,9 @@ const HeroImage = () => (
         width="143.26"
         height="162.188"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
         <feGaussianBlur stdDeviation="2" result="effect1_foregroundBlur" />
       </filter>
@@ -119,9 +119,9 @@ const HeroImage = () => (
         width="420"
         height="310"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix
           in="SourceAlpha"
           type="matrix"
@@ -143,9 +143,9 @@ const HeroImage = () => (
         width="97.5475"
         height="118.495"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
         <feGaussianBlur stdDeviation="3" result="effect1_foregroundBlur" />
       </filter>
