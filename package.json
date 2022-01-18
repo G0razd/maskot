@@ -1,7 +1,7 @@
 {
   "name": "maskot",
   "author": "Lukáš Gorazd Hrodek",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "license": "MIT",
   "scripts": {
     "develop": "gatsby develop",
@@ -35,5 +35,8 @@
     "eslint-plugin-react": "^7.24.0",
     "eslint-plugin-react-hooks": "^4.2.0",
     "prettier": "^2.3.2"
+  },
+  "engines": {
+    "node": "<=9"
   }
 }
