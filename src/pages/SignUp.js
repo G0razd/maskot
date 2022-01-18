@@ -11,6 +11,7 @@ const SignUp = () => {
     "Statistika a analýza dat (v programu Matematika) ",
     "Jiný",
   ]
+
   const kombinace = [
     "s angličtinou",
     "s biologií",
