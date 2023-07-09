@@ -1,7 +1,23 @@
 import React from "react"
 import { camelCase } from "lodash"
 import { Formik, Field, Form } from "formik"
+import SteinStore from "stein-js-client";
 const FormikGenerator = ({ fields }) => {
+ 
+  const steinAPI = "https://api.steinhq.com/v1/storages/64ab06f3eced9b09e9df76ae"
+  const store = new SteinStore(steinAPI);
+  function handleSubmit(values) {
+    console.log(values);
+    store.append("odpovedi", [values])
+      .then(res => {
+        console.log(res);
+      })
+      .catch(err => {
+        alert(err);
+      });
+  }
+
+
   function init(fields) {
     const initialValues = {}
     fields.forEach(value => {
@@ -15,12 +31,15 @@ const FormikGenerator = ({ fields }) => {
   }
 
   const initialValues = init(fields)
+  console.log(Object.keys(initialValues))
   return (
     <Formik
       initialValues={initialValues}
       onSubmit={async values => {
         await new Promise(r => setTimeout(r, 500))
         alert(JSON.stringify(values, null, 2))
+        handleSubmit(values)
+        
       }}
     >
       {({ values }) => (
@@ -38,7 +57,7 @@ const FormikGenerator = ({ fields }) => {
                 <div
                   key={key}
                   className={
-                    conditional && "my-8 lg:my-0 col-span-2 grid-cols-2 md:grid gap-8 h-12"
+                    conditional ? "my-8 lg:my-0 col-span-2 grid-cols-2 md:grid gap-8 h-12" : ""
                   }
                 >
                   <div className={`flex items-center justify-between w-full`}>
