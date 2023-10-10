@@ -1,10 +1,9 @@
 import React from "react"
-import { Link } from "gatsby"
-import { Card, MemberCard, LabelText, Layout, SplitSection } from "/src/components"
-import { HeroImage, SvgCharts, AdventureMap, Genius, Line } from "/src/svg"
-import team from "../data/team"
+import { Link, PageProps } from "gatsby"
+import { Card, Layout, SplitSection } from "@components"
+import { HeroImage, SvgCharts, AdventureMap, Genius, Line } from "@svg"
 
-const Index = () => (
+const Index: React.FC<PageProps> = () => (
   <Layout>
     <section id="domu" className="pt-10 md:pt-20">
       <div className="container px-8 mx-auto lg:flex">

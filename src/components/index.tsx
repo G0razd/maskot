@@ -1,7 +1,7 @@
 export { default as Card } from "./Card"
 export { default as MemberCard } from "./MemberCard"
 export { default as LabelText } from "./LabelText"
-export { default as Layout } from "./layout/Layout"
+export { default as Layout } from "./layout/"
 export { default as SplitSection } from "./SplitSection"
 export { default as Info } from "./Info"
 export { default as FormikGenerator } from "./FormikGenerator"
