@@ -1,17 +1,18 @@
 import React from "react"
 import { Layout, Info, FormikGenerator } from "@components"
-import { fields } from "@data"
+import { FieldName, FieldValue, fields } from "@data"
+//@ts-ignore
 import SteinStore from "stein-js-client"
 
 const steinAPI = "https://api.steinhq.com/v1/storages/64ab06f3eced9b09e9df76ae"
 const store = new SteinStore(steinAPI)
-function handleSubmit(values) {
+function handleSubmit(values: { [key: FieldName]: FieldValue }) {
   store
     .append("odpovedi", [values])
-    .then(res => {
+    .then((res: any) => {
       console.log(res)
     })
-    .catch(err => {
+    .catch((err: any) => {
       alert(err)
     })
 }

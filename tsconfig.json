@@ -1,5 +1,5 @@
 {
-  "include": ["./src/**/*"],
+  "include": ["./src/**/*", "src/types"],
   "exclude": ["./public/*", "*config*", "./node_modules/*"],
   "compilerOptions": {
     "target": "ES2021",
@@ -43,7 +43,7 @@
     "moduleResolution": "node",
 
     "rootDirs": ["./", "./src"],
-    "typeRoots": ["./types", "./@types", "node_modules/@types"],
+    "typeRoots": ["src/types", "./@types", "node_modules/@types"],
     "types": ["node", "react"],
 
     "esModuleInterop": true,

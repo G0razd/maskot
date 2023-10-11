@@ -23,11 +23,13 @@ export const kombinace: FieldValue[] = [
 ]
 
 type FieldType = "date" | "select" | "checkbox" | "tel" | "email" | "year" | "input"
-type FieldName = string
-type FieldValue = string | boolean
+export type FieldName = string
+export type FieldValue = string | boolean
 
 export interface FormField {
   name: FieldName
+  description?: string
+  autocomplete?: string
   type?: FieldType | `conditional ${FieldType}`
   conditional?: [FieldName, FieldValue]
   notRequired?: boolean
@@ -35,31 +37,42 @@ export interface FormField {
   label?: string
 }
 
-export const fields: FormField[] = [
+export const fields: any = [
   {
     name: "Jméno",
+    autocomplete: "given-name",
   },
   {
     name: "Příjmení",
+    autocomplete: "family-name",
   },
   {
     name: "Datum Narození",
+    autocomplete: "bday",
     type: "date",
   },
   {
     name: "Adresa",
+    autocomplete: "street-address",
   },
   {
     name: "Telefon",
+    autocomplete: "tel",
     type: "tel",
   },
-  { name: "Email", type: "email" },
+  {
+    name: "Email",
+    autocomplete: "email",
+    type: "email",
+  },
   {
     name: "Škola",
+    autocomplete: "organization",
     notRequired: true,
   },
   {
     name: "Rok maturity",
+
     type: "year",
   },
   {

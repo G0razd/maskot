@@ -1,11 +1,12 @@
-const tsconfig = require("./tsconfig.json")
+import type { GatsbyConfig } from "gatsby"
+import adapter from "gatsby-adapter-netlify"
+import { TSConfig } from "./src/types/tsconfig"
+
+const tsconfig: TSConfig = require("./tsconfig.json")
 const aliases = Object.entries(tsconfig.compilerOptions.paths).reduce((acc, [key, value]) => {
   acc[key] = value[0]
   return acc
 }, {})
-
-import type { GatsbyConfig } from "gatsby"
-import adapter from "gatsby-adapter-netlify"
 
 const config: GatsbyConfig = {
   adapter: adapter(),
